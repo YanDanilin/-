@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var speed = 250
+var speed = 200
 onready var animated_sprite = $AnimatedSprite
 
 

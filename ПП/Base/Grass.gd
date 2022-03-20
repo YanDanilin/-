@@ -1,7 +1,7 @@
 extends TileMap
 
-var VERT = 52
-var HOR = 52
+var VERT = 54
+var HOR = 54
 
 
 func _ready():
