@@ -60,11 +60,11 @@ animations = [ {
 "frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
 "loop": true,
-"name": "attack",
+"name": "run",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
@@ -85,5 +85,6 @@ shape = SubResource( 1 )
 position = Vector2( -6, -262 )
 scale = Vector2( 0.986328, 1 )
 frames = SubResource( 12 )
-animation = "attack"
+animation = "run"
+frame = 3
 playing = true
