@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Menu/TextureButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/fences1.png" type="Texture" id=2]
+[ext_resource path="res://fonts/PixelSmall_v2.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton"]
+margin_right = 1024.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+focus_mode = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 2
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Text button [/center]"
+text = " Text button "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftArrow" type="Sprite" parent="."]
+position = Vector2( 412, 25 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="RightArrow" type="Sprite" parent="."]
+position = Vector2( 612, 25 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[connection signal="focus_entered" from="." to="." method="_on_TextureButton_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_TextureButton_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_TextureButton_mouse_entered"]
